@@ -8,7 +8,7 @@
             <div class="col-lg-7">
                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                     <div class="card-header bg-primary text-white text-center">
-                        <h3><i class="fas fa-user-plus"></i> Add New Customer</h3>
+                        <h4><i class="fas fa-user-plus"></i> Add New Customer</h4>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ url('/insert-customer') }}" enctype="multipart/form-data">

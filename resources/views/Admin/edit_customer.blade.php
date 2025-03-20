@@ -3,7 +3,7 @@
 @section('content')
 
 <main>
-    <div class="container">
+    <div class="container ">
         <div class="row justify-content-center">
             <div class="col-lg-7">
                 <div class="card shadow-lg border-0 rounded-lg mt-5">
@@ -13,7 +13,7 @@
                     <div class="card-body">
                         <form method="POST" action="{{ route('customers.update', $customer->id) }}" enctype="multipart/form-data">
                             @csrf
-                            <!-- @method('PUT') -->
+                            @method('PUT')
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">

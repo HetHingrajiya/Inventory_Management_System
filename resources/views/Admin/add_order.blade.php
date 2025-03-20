@@ -3,11 +3,11 @@
 @section('content')
 
 <main>
-    <div class="container">
+    <div class="container ">
         <div class="row justify-content-center">
             <div class="col-lg-7">
                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Add New Order</h3></div>
+                    <div class="card-header"><h4 class="text-center font-weight-light my-4">Add New Order</h4></div>
                     <div class="card-body">
                         <form method="POST" action="{{url('/insert-order') }}" enctype="multipart/form-data">
                         @csrf
@@ -54,12 +54,6 @@
 
                             <div class="form-group mt-4 mb-0"><button class="btn btn-primary btn-block">Submit</button></div>
                         </form>
-                        <!-- Back to Dashboard Button -->
-                        <div class="text-center mt-3">
-                            <a href="{{ route('dashboard') }}" class="btn btn-secondary">
-                                <i class="fas fa-arrow-left"></i> Back to Dashboard
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>

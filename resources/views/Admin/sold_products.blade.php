@@ -1,6 +1,6 @@
 @extends('layouts.admin_master')
 @section('content')
-<div class="card mb-4">
+<div class="card mb-5">
     <div class="card-header">
         <i class="fas fa-table mr-1"></i>
         Sold Products
@@ -14,7 +14,7 @@
                         <th>Quantity</th>
                     </tr>
                 </thead>
-                
+
                 <tbody>
                 	@foreach($products as $row)
                     <tr>
@@ -22,7 +22,7 @@
                         <td>{{ $row->count }}</td>
                     </tr>
                     @endforeach
-                    
+
                 </tbody>
             </table>
         </div>

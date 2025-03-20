@@ -2,10 +2,10 @@
 
 @section('content')
 <main>
-    <div class="container">
+    <div class="container mt-5">
 <div class="card mb-4 shadow">
-    <div class="card-header bg-primary text-white">
-        <i class="fas fa-boxes mr-1"></i> Orders List
+    <div class="card-header bg-primary text-white text-center">
+        <h4 class="m-0"> <i class="fas fa-boxes mr-1"></i>Pending Orders List</h4>
     </div>
     <div class="card-body">
         <div class="table-responsive">

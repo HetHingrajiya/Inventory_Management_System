@@ -4,11 +4,11 @@
 
 
 <main>
-    <div class="container">
+    <div class="container mt-5">
 <div class="card mb-4 shadow-lg rounded">
-    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+    <div class="card-header bg-primary text-white text-center">
         <h4><i class="fas fa-file-invoice-dollar me-2"></i>Invoices List</h4>
-        <a  class="btn btn-sm btn-light" href="{{ route('new.invoice') }}"><i class="fas fa-plus-circle"></i> Add New Invoice</a>
+
     </div>
 
     <div class="card-body">

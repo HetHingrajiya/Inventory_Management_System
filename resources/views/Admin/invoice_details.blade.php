@@ -48,6 +48,12 @@
             <tr><td>Due</td><td>{{ $data->due }}</td></tr>
             <tr><td>Status</td><td>Product on Delivery</td></tr>
         </table>
+
+        <div class="card-footer text-center bg-white">
+                <a href="{{ route('all.orders') }}" class="btn btn-secondary rounded-pill px-4">
+                    <i class="fas fa-arrow-left"></i> Back to Order
+                </a>
+            </div>
     </div>
 </body>
 </main>

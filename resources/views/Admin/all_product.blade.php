@@ -2,24 +2,24 @@
 
 @section('content')
 
-<div class="container mt-4">
+<div class="container mt-5">
     <div class="card shadow-lg border-0 rounded-lg">
-        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
-            <h3 class="m-0"><i class="fas fa-box-open"></i> Products in Stock</h3>
-        </div>
 
+        <div class="card-header bg-primary text-white text-center">
+            <h4 class="m-0"><i class="fas fa-box-open mr-2"></i> Products in Stock</h4>
+        </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-hover table-bordered text-center" id="dataTable" width="100%">
-                    <thead class="bg-dark text-white">
+                <table class="table table-hover table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead class="bg-light">
                         <tr>
-                            <th><i class="fas fa-barcode"></i> Code</th>
-                            <th><i class="fas fa-box"></i> Name</th>
-                            <th><i class="fas fa-tags"></i> Category</th>
-                            <th><i class="fas fa-cubes"></i> Stock</th>
-                            <th><i class="fas fa-rupee-sign"></i> Unit Price</th>
-                            <th><i class="fas fa-rupee-sign"></i> Sale Price</th>
-                            <th><i class="fas fa-cogs"></i> Action</th>
+                            <th>Code</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Stock</th>
+                            <th>Unit Price</th>
+                            <th>Sale Price</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -33,24 +33,22 @@
                                 {{ $row->stock > 0 ? $row->stock : 'Stock Out' }}
                             </td>
 
-                            <td>₹{{ number_format($row->unit_price, 2) }}</td>
-                            <td>₹{{ number_format($row->sales_unit_price, 2) }}</td>
+                            <td>{{ number_format($row->unit_price, 2) }}</td>
+                            <td>{{ number_format($row->sales_unit_price, 2) }}</td>
 
-                            <td class="d-flex justify-content-center">
-                                <form action="{{ route('delete.product', $row->id) }}" method="POST" class="me-2">
+                            <td>
+
+                                <form action="{{ route('delete.product', $row->id) }}" method="POST" class="d-inline">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">
-                                        <i class="fas fa-trash"></i> Delete
+                                        🗑️ Delete
                                     </button>
                                 </form>
 
-                                <div class="card-footer text-center">
-                                    <a href="{{ route('dashboard') }}" class="btn btn-secondary">
-                                        <i class="fas fa-arrow-left"></i> Back to Dashboard
-                                    </a>
-                                </div>
-
+                                <a href="{{ url('purchase-products/'.$row->id) }}" class="btn btn-sm btn-success">
+                                    🛒 Buy
+                                </a>
                             </td>
                         </tr>
                         @endforeach
@@ -58,7 +56,6 @@
                 </table>
             </div>
         </div>
-
     </div>
 </div>
 

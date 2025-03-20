@@ -82,7 +82,7 @@ class InvoiceController extends Controller
 
         // Directly create the HTML content instead of using a Blade view
         $html = '
-        <h2 style="text-align: center;">Esay Stock Tracker</h2>
+        <h2 style="text-align: center;">Easy Stock Tracker</h2>
         <p>Invoice #: ' . $data->id . '<br> Created: ' . $data->created_at . '</p>
         <table border="1" cellspacing="0" cellpadding="5" width="100%">
             <tr style="background: #eee; font-weight: bold;">

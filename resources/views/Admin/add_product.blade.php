@@ -8,7 +8,7 @@
             <div class="col-lg-6">
                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                     <div class="card-header bg-primary text-white">
-                        <h3 class="text-center fw-bold my-2">🛍️ Add a New Product</h3>
+                        <h4 class="text-center fw-bold my-2">🛍️ Add a New Product</h4>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ url('/insert-product') }}" enctype="multipart/form-data">
@@ -63,12 +63,6 @@
                                 <button class="btn btn-success w-50 px-4 py-2 rounded-pill fw-bold shadow">✅ Add Product</button>
                             </div>
                         </form>
-                        <!-- Back to Dashboard Button -->
-                        <div class="text-center mt-3">
-                            <a href="{{ route('dashboard') }}" class="btn btn-secondary">
-                                <i class="fas fa-arrow-left"></i> Back to Dashboard
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>

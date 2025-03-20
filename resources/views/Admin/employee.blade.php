@@ -2,13 +2,11 @@
 
 @section('content')
 <main>
-    <div class="container">
+    <div class="container mt-5">
         <div class="card shadow-lg border-0 rounded-lg mt-4">
-            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <div class="card-header bg-primary text-white text-center">
                 <h4><i class="fas fa-users me-2"></i> Employee List</h4>
-                <a href="{{ route('employees.add_employee') }}" class="btn btn-light btn-sm">
-                    <i class="fas fa-user-plus"></i> Add New Employee
-                </a>
+
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -20,7 +18,7 @@
                                 <th><i class="fas fa-building"></i> Office</th>
                                 <th><i class="fas fa-birthday-cake"></i> Age</th>
                                 <th><i class="fas fa-calendar-alt"></i> Start Date</th>
-                                <th><i class="fas fa-dollar-sign"></i> Salary</th>
+                                <th><i class="fas fa-rupee-sign"></i> Salary</th>
                                 <th class="text-center"><i class="fas fa-cogs"></i> Actions</th>
                             </tr>
                         </thead>
@@ -32,7 +30,7 @@
                                 <td>{{ $employee->office }}</td>
                                 <td>{{ $employee->age }}</td>
                                 <td>{{ \Carbon\Carbon::parse($employee->start_date)->format('d M, Y') }}</td>
-                                <td>{{ number_format($employee->salary) }}</td>
+                                <td>{{ number_format($employee->salary, 2) }}</td>
                                 <td class="text-center">
                                     <a href="{{ route('employees.edit', $employee->id) }}" class="btn btn-sm btn-outline-primary" title="Edit">
                                         <i class="fas fa-edit"></i>

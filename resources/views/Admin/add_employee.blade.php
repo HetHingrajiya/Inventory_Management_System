@@ -7,7 +7,7 @@
             <div class="col-lg-6">
                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                     <div class="card-header bg-primary text-white text-center">
-                        <h3><i class="fas fa-user-plus me-2"></i> Add New Employee</h3>
+                        <h4><i class="fas fa-user-plus me-2"></i> Add New Employee</h4>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('employees.store') }}" enctype="multipart/form-data">
@@ -56,7 +56,7 @@
                                 <!-- Salary -->
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="fw-bold"><i class="fas fa-dollar-sign"></i> Salary</label>
+                                        <label class="fw-bold"><i class="fas fa-rupee-sign"></i> Salary</label>
                                         <input type="number" class="form-control" name="salary" placeholder="Salary Amount" required>
                                     </div>
                                 </div>
