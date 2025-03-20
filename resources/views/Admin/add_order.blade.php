@@ -54,6 +54,12 @@
 
                             <div class="form-group mt-4 mb-0"><button class="btn btn-primary btn-block">Submit</button></div>
                         </form>
+                        <!-- Back to Dashboard Button -->
+                        <div class="text-center mt-3">
+                            <a href="{{ route('dashboard') }}" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left"></i> Back to Dashboard
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

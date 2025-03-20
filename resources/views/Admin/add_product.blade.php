@@ -63,6 +63,12 @@
                                 <button class="btn btn-success w-50 px-4 py-2 rounded-pill fw-bold shadow">✅ Add Product</button>
                             </div>
                         </form>
+                        <!-- Back to Dashboard Button -->
+                        <div class="text-center mt-3">
+                            <a href="{{ route('dashboard') }}" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left"></i> Back to Dashboard
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
