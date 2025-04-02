@@ -10,7 +10,7 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-hover table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-hover table-bordered text-center" id="dataTable" width="100%" cellspacing="0">
                     <thead class="bg-light">
                         <tr>
                             <th>Code</th>
@@ -28,27 +28,19 @@
                             <td class="fw-bold">{{ $row->product_code }}</td>
                             <td>{{ $row->name }}</td>
                             <td>{{ $row->category }}</td>
-
                             <td class="{{ $row->stock > 0 ? 'text-success fw-bold' : 'text-danger fw-bold' }}">
                                 {{ $row->stock > 0 ? $row->stock : 'Stock Out' }}
                             </td>
-
                             <td>{{ number_format($row->unit_price, 2) }}</td>
                             <td>{{ number_format($row->sales_unit_price, 2) }}</td>
-
                             <td>
-
                                 <form action="{{ route('delete.product', $row->id) }}" method="POST" class="d-inline">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">
-                                        🗑️ Delete
+                                        <i class="fas fa-trash-alt"></i> Delete
                                     </button>
                                 </form>
-
-                                <a href="{{ url('purchase-products/'.$row->id) }}" class="btn btn-sm btn-success">
-                                    🛒 Buy
-                                </a>
                             </td>
                         </tr>
                         @endforeach
@@ -77,7 +69,12 @@
                 { extend: 'excelHtml5', exportOptions: { columns: [0, ':visible'] } },
                 { extend: 'pdfHtml5', exportOptions: { columns: [0, 1, 2, 5] } },
                 'colvis'
-            ]
+            ],
+            pagingType: 'full_numbers',
+            language: {
+                searchPlaceholder: "Search...",
+                search: ""
+            }
         });
     });
 </script>

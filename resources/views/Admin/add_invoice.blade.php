@@ -64,7 +64,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="small mb-1"><i class="fas fa-dollar-sign"></i> Price (per Unit)</label>
-                                        <input class="form-control" name="unit_price" type="text" value="{{ $product->unit_price }}" />
+                                        <input class="form-control" name="unit_price" type="text" value="{{ $product->sales_unit_price }}" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -77,7 +77,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="small mb-1"><i class="fas fa-calculator"></i> Total Price</label>
-                                        <input class="form-control" name="total" type="text" value="{{ isset($product, $order) ? $product->unit_price * $order->quantity : '' }}" />
+                                        <input class="form-control" name="total" type="text" value="{{ isset($product, $order) ? $product->sales_unit_price * $order->quantity : '' }}" />
                                     </div>
                                 </div>
 

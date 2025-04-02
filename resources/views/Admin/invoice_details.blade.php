@@ -32,7 +32,7 @@
 <main>
 <body>
     <div class="invoice-box">
-        <h2>Esay Stock Tracker</h2>
+        <h2>Easy Stock Tracker</h2>
         <p>Invoice #: {{ $data->id }}<br> Created: {{ $data->created_at }}</p>
         <a href="{{ route('invoice.pdf', $data->id) }}" class="btn btn-primary">Download PDF</a>
 
