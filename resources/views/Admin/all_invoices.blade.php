@@ -23,7 +23,7 @@
                         <th><i class="fas fa-map-marker-alt"></i> Address</th>
                         <th><i class="fas fa-box"></i> Product</th>
                         <th><i class="fas fa-sort-numeric-up"></i> Qty</th>
-                        <th><i class="fas fa-dollar-sign"></i> Total</th>
+                        <th><i class="fas fa-rupee-sign"></i> Total</th>
                         <th><i class="fas fa-coins"></i> Due</th>
                         <th><i class="fas fa-calendar-alt"></i> Date</th>
 
@@ -39,8 +39,8 @@
                         <td>{{ $row->address }}</td>
                         <td>{{ $row->product_name }}</td>
                         <td>{{ $row->quantity }}</td>
-                        <td>${{ number_format($row->total, 2) }}</td>
-                        <td>${{ number_format($row->due, 2) }}</td>
+                        <td>₹{{ number_format($row->total, 2) }}</td>
+                        <td>₹{{ number_format($row->due, 2) }}</td>
                         <td>{{ $row->created_at->format('d M Y') }}</td>
 
                     </tr>

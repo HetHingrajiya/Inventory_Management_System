@@ -103,7 +103,7 @@ Route::get('/all-customers',[CustomerController::class,'customersData'])->middle
 
 Route::get('customers/edit/{id}', [CustomerController::class, 'edit'])->name('customers.edit');
 
-Route::post('update-customer/{id}', [CustomerController::class, 'update'])->name('customers.update');
+Route::put('update-customer/{id}', [CustomerController::class, 'update'])->name('customers.update');
 
 Route::delete('/customer/delete/{id}', [CustomerController::class, 'destroy'])->name('customers.destroy');
 
